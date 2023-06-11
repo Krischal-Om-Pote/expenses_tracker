@@ -24,7 +24,7 @@ class _MyAppState extends State<MyApp> {
   ];
 
   List<Transaction> get recentTransaction {
-    /// This class represents a single transaction.
+    /// This class represents a single transaction and suration is 7 days.
     return transactionList.where((tx) {
       return tx.dateTime.isAfter(
         DateTime.now().subtract(
@@ -60,7 +60,7 @@ class _MyAppState extends State<MyApp> {
     );
   }
 
-  // This widget is the root of your application.
+  // This widget is the root of our application.
   @override
   Widget build(BuildContext ctx) {
     return MaterialApp(
